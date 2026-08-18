@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOHA 艺术博物馆 APP · 延展观展体验 | MOHA Art Museum App — Portfolio</title>
+  <meta name="description" content="与 Modern History and Art Museum 合作的课程项目：通过移动端延展博物馆观展体验，系统化呈现艺术家与作品，并提供艺术印刷品定制、下单与礼赠功能。" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<button class="btn-pdf" onclick="window.print()" aria-label="导出 PDF">↓ 导出 PDF</button> class="lang-zh">
+  <header class="nav" id="nav">
+    <a href="index.html" class="nav__logo">Leo<span class="zh"> · 赖嘉豪</span><span class="en"> · Jiahao Lai</span></a>
+    <nav class="nav__links" id="navLinks">
+      <a href="index.html#work"><span class="zh">作品</span><span class="en">Work</span></a>
+      <a href="index.html#photo"><span class="zh">摄影</span><span class="en">Photo</span></a>
+      <a href="index.html#about"><span class="zh">关于</span><span class="en">About</span></a>
+      <a href="index.html#contact"><span class="zh">联系</span><span class="en">Contact</span></a>
+    </nav>
+    <div class="nav__right">
+      <button class="lang-toggle" id="langToggle" aria-label="切换语言">EN</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="菜单">☰</button>
+    </div>
+  </header>
+
+  <main class="project">
+    <!-- HERO -->
+    <section class="project__hero reveal">
+      <p class="project__eyebrow"><span class="zh">课程项目 · UX / UI</span><span class="en">Course Project · UX / UI</span></p>
+      <h1><span class="zh">MOHA · 把博物馆带回家</span><span class="en">MOHA · Bring the Museum Home</span></h1>
+      <div class="project__meta">
+        <span><span class="zh">角色</span><span class="en">Role</span>：UX / UI 设计师与研究员</span>
+        <span><span class="zh">周期</span><span class="en">Duration</span>：4 周</span>
+        <span><span class="zh">年份</span><span class="en">Year</span>：2024</span>
+        <span><span class="zh">工具</span><span class="en">Tools</span>：Figma</span>
+      </div>
+    </section>
+
+    <!-- PROJECT COVER -->
+    <section class="project__block project-cover reveal">
+      <div class="project-cover__media">
+        <img src="images/moha-cover.webp" alt="MOHA 艺术博物馆 APP 项目封面"  loading="lazy" width="1400" height="788"/>
+      </div>
+    </section>
+
+    <!-- 01 OVERVIEW -->
+    <section class="project__block reveal">
+      <h2><span class="zh">项目概述</span><span class="en">Project Overview</span></h2>
+      <p><span class="zh">MOHA 是一个与 <strong>Modern History and Art Museum (MOHA)</strong> 合作完成的课程项目。这款移动应用旨在<strong>延展观展体验</strong>，通过系统化呈现艺术家与艺术作品，并提供艺术印刷品的定制、下单与礼赠功能，将博物馆体验从线下延伸至数字与日常生活场景。</span><span class="en">MOHA is a course project in collaboration with the Modern History and Art Museum (MOHA). The mobile app extends the exhibition experience by systematically presenting artists and artworks, while offering art-print customization, ordering, and gifting — bringing the museum from the physical space into everyday digital life.</span></p>
+      <figure class="proj-img">
+        <img src="images/moha/moha-01.webp" alt="项目概述：MOHA 与博物馆合作的移动端方案"  loading="lazy" width="1400" height="788"/>
+        <figcaption><span class="zh">以 Vivian Maier 为示例艺术家的作品与艺术家详情页</span><span class="en">Artist and artwork detail page using Vivian Maier as a sample.</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- 02 PROBLEMS & USERS -->
+    <section class="project__block reveal">
+      <h2><span class="zh">问题洞察 · 目标用户</span><span class="en">Problem &amp; Target Users</span></h2>
+      <p><span class="zh">项目从博物馆的实际痛点出发，识别出四个关键问题：<strong>访问受限</strong>（离开展厅后无法继续接触作品）、<strong>参与度较低</strong>（传统展览形式静态，缺少数字化互动）、<strong>缺乏便捷的礼赠方式</strong>（艺术印刷品购买与赠送流程复杂）、<strong>错失年轻用户</strong>（年轻受众缺少数字化入口）。</span><span class="en">The project started from real museum pain points: limited access after leaving the gallery, low engagement with static exhibitions, inconvenient art-print gifting, and a missing digital entry point for younger audiences.</span></p>
+      <div class="challenge-list">
+        <div class="challenge-item">
+          <span class="challenge-item__no">01</span>
+          <div class="challenge-item__body">
+            <strong><span class="zh">艺术收藏者与礼品购买者</span><span class="en">Art collectors &amp; gift buyers</span></strong>
+            <p><span class="zh">具备购买艺术印刷品的消费能力，希望获得便捷、个性化的礼赠体验。</span><span class="en">Have spending power for art prints and want convenient, personalized gifting experiences.</span></p>
+          </div>
+        </div>
+        <div class="challenge-item">
+          <span class="challenge-item__no">02</span>
+          <div class="challenge-item__body">
+            <strong><span class="zh">年轻艺术爱好者</span><span class="en">Young art lovers</span></strong>
+            <p><span class="zh">20–30 岁，常参观博物馆与艺术展览，希望将艺术融入日常生活。</span><span class="en">Aged 20–30, frequent museum visitors who want art integrated into daily life.</span></p>
+          </div>
+        </div>
+        <div class="challenge-item">
+          <span class="challenge-item__no">03</span>
+          <div class="challenge-item__body">
+            <strong><span class="zh">数字技能熟练的用户</span><span class="en">Digitally skilled users</span></strong>
+            <p><span class="zh">习惯使用移动应用获取文化内容，对 AR 与线上艺术体验感兴趣。</span><span class="en">Comfortable using apps for cultural content and interested in AR and online art experiences.</span></p>
+          </div>
+        </div>
+        <div class="challenge-item">
+          <span class="challenge-item__no">04</span>
+          <div class="challenge-item__body">
+            <strong><span class="zh">注重社交参与的用户</span><span class="en">Socially engaged users</span></strong>
+            <p><span class="zh">乐于在社交平台分享文化体验，重视身份认同与文化连接感。</span><span class="en">Enjoy sharing cultural experiences on social platforms and value identity and cultural connection.</span></p>
+          </div>
+        </div>
+      </div>
+      <figure class="proj-img">
+        <img src="images/moha/moha-02.webp" alt="问题洞察与目标用户画像"  loading="lazy" width="1400" height="788"/>
+        <figcaption><span class="zh">四大痛点与四类核心用户</span><span class="en">Four pain points and four core user groups.</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- 03 DESIGN PRINCIPLES -->
+    <section class="project__block reveal">
+      <h2><span class="zh">设计原则</span><span class="en">Design Principles</span></h2>
+      <p><span class="zh">为了降低艺术探索门槛并提升购买转化率，界面设计遵循四条经典可用性原则：</span><span class="en">To lower the barrier of art exploration and improve conversion, the interface follows four classic usability principles:</span></p>
+      <div class="value-grid">
+        <div class="value-card">
+          <div class="value-card__no"><span class="zh">希克定律</span><span class="en">Hick's Law</span></div>
+          <p><span class="zh">减少用户在选择过程中的认知负担，提升决策效率。</span><span class="en">Reduce cognitive load during decision-making to improve efficiency.</span></p>
+        </div>
+        <div class="value-card">
+          <div class="value-card__no"><span class="zh">费茨定律</span><span class="en">Fitts's Law</span></div>
+          <p><span class="zh">通过合理的按钮尺寸与点击区域，让交互目标更直观、易于操作。</span><span class="en">Use appropriate button sizes and touch targets to make interactions intuitive.</span></p>
+        </div>
+        <div class="value-card">
+          <div class="value-card__no"><span class="zh">雅各布定律</span><span class="en">Jakob's Law</span></div>
+          <p><span class="zh">利用用户熟悉的交互模式，降低学习成本，提升使用流畅度。</span><span class="en">Leverage familiar patterns to lower learning costs and improve fluency.</span></p>
+        </div>
+        <div class="value-card">
+          <div class="value-card__no"><span class="zh">米勒定律</span><span class="en">Miller's Law</span></div>
+          <p><span class="zh">通过信息分组与内容分块，增强理解效率与记忆效果。</span><span class="en">Group and chunk information to improve comprehension and memorability.</span></p>
+        </div>
+      </div>
+      <figure class="proj-img">
+        <img src="images/moha/moha-03.webp" alt="设计原则：希克、费茨、雅各布、米勒定律"  loading="lazy" width="1400" height="788"/>
+        <figcaption><span class="zh">四条可用性原则指导界面迭代与优化</span><span class="en">Four usability principles guided interface iteration.</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- 04 CORE FEATURES -->
+    <section class="project__block reveal">
+      <h2><span class="zh">核心功能</span><span class="en">Core Features</span></h2>
+      <p><span class="zh">用户可以探索艺术家作品、将艺术印刷品作为独特礼物购买，并通过 AR 预览将博物馆体验延展至日常生活。</span><span class="en">Users can explore artists and artworks, purchase art prints as unique gifts, and extend the museum experience into daily life through AR preview.</span></p>
+      <div class="value-grid">
+        <div class="value-card">
+          <div class="value-card__no">01</div>
+          <h4><span class="zh">艺术家与作品展示</span><span class="en">Artist &amp; artwork showcase</span></h4>
+          <p><span class="zh">浏览精选艺术家生平与代表作品，快速理解艺术背景与创作语境。</span><span class="en">Browse curated artist biographies and representative works to quickly understand artistic context.</span></p>
+        </div>
+        <div class="value-card">
+          <div class="value-card__no">02</div>
+          <h4><span class="zh">个性化印刷品定制</span><span class="en">Personalized print customization</span></h4>
+          <p><span class="zh">选择尺寸、装裱与材质，添加礼赠留言，直接寄送给他人。</span><span class="en">Choose size, frame, and material, add a gift message, and ship directly to recipients.</span></p>
+        </div>
+        <div class="value-card">
+          <div class="value-card__no">03</div>
+          <h4><span class="zh">可选 AR 预览</span><span class="en">Optional AR preview</span></h4>
+          <p><span class="zh">在购买前将艺术作品虚拟放置于真实空间，直观感受作品与环境的关系。</span><span class="en">Place artwork virtually in real space before purchase to feel how it relates to the environment.</span></p>
+        </div>
+      </div>
+      <figure class="proj-img">
+        <img src="images/moha/moha-04.webp" alt="核心功能：艺术家展示、印刷品定制、AR 预览"  loading="lazy" width="1400" height="788"/>
+        <figcaption><span class="zh">三大核心功能与对应的体验卡片</span><span class="en">Three core features and their experience cards.</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- 05 USER FLOW -->
+    <section class="project__block reveal">
+      <h2><span class="zh">核心流程：准备一份完美礼物</span><span class="en">Core Flow: Preparing the Perfect Gift</span></h2>
+      <p><span class="zh">以"送礼"作为关键场景，把从探索到送出拆分为四个清晰的步骤，让用户在每一步都能获得明确的反馈与控制感。</span><span class="en">Using "gift-giving" as the key scenario, the flow is divided into four clear steps, giving users feedback and control at every stage.</span></p>
+      <div class="journey-steps">
+        <div class="journey-step"><span class="journey-step__no">01</span><h4><span class="zh">探索展览</span><span class="en">Explore</span></h4><p><span class="zh">浏览精选艺术家，发现富有灵感的艺术作品</span><span class="en">Browse curated artists and discover inspiring artworks</span></p></div>
+        <div class="journey-step"><span class="journey-step__no">02</span><h4><span class="zh">选择作品</span><span class="en">Select</span></h4><p><span class="zh">挑选对自己或收礼者具有情感意义的 artwork</span><span class="en">Pick an artwork with emotional meaning for you or the recipient</span></p></div>
+        <div class="journey-step"><span class="journey-step__no">03</span><h4><span class="zh">个性化定制与下单</span><span class="en">Customize &amp; order</span></h4><p><span class="zh">选择尺寸与装裱方式，添加专属礼赠留言</span><span class="en">Choose size and frame, add a personal gift message</span></p></div>
+        <div class="journey-step"><span class="journey-step__no">04</span><h4><span class="zh">预览并送出</span><span class="en">Preview &amp; send</span></h4><p><span class="zh">通过 AR 在真实空间中预览效果，确认并完成配送</span><span class="en">Preview in real space with AR, confirm, and complete delivery</span></p></div>
+      </div>
+      <figure class="proj-img">
+        <img src="images/moha/moha-05.webp" alt="送礼四步流程：探索、选择、定制、预览送出"  loading="lazy" width="1400" height="788"/>
+        <figcaption><span class="zh">用 MOHA 准备一份完美礼物的四个步骤</span><span class="en">Four steps to prepare a perfect gift with MOHA.</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- 06 INTERFACE OVERVIEW -->
+    <section class="project__block reveal">
+      <h2><span class="zh">界面展示</span><span class="en">Interface Showcase</span></h2>
+      <p><span class="zh">高保真界面覆盖了艺术家详情、装裱材质选择、配色方案、AR 预览、订单确认与城市列表等关键页面，整体采用温暖的橙色调与大量留白，强调艺术作品的视觉主体地位。</span><span class="en">Hi-fi screens cover artist details, framing material selection, color options, AR preview, order confirmation, and city lists. The warm orange palette and generous whitespace keep the artworks as the visual focus.</span></p>
+      <figure class="proj-img">
+        <img src="images/moha/moha-06.webp" alt="界面展示：MOHA 完整高保真界面概览"  loading="lazy" width="1400" height="788"/>
+        <figcaption><span class="zh">核心界面与完整原型网格</span><span class="en">Key screens and the full prototype grid.</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- 06.5 HI-FI GALLERY -->
+    <section class="project__block reveal">
+      <h2><span class="zh">完整高保真界面</span><span class="en">Full Hi-Fi Screens</span></h2>
+      <p><span class="zh">以下是 29 张完整高保真界面，涵盖启动页、登录/注册、艺术家主页、作品详情、定制流程、AR 预览、购物车、订单与设置等全链路。</span><span class="en">Below are 29 full hi-fi screens covering splash, sign-in/up, artist home, artwork details, customization, AR preview, cart, orders, and settings.</span></p>
+      <div class="hifi-gallery">
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-1.webp" alt="MOHA 高保真界面 01"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-2.webp" alt="MOHA 高保真界面 02"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-3.webp" alt="MOHA 高保真界面 03"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-4.webp" alt="MOHA 高保真界面 04"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-5.webp" alt="MOHA 高保真界面 05"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-6.webp" alt="MOHA 高保真界面 06"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-7.webp" alt="MOHA 高保真界面 07"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-8.webp" alt="MOHA 高保真界面 08"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-9.webp" alt="MOHA 高保真界面 09"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-10.webp" alt="MOHA 高保真界面 10"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-11.webp" alt="MOHA 高保真界面 11"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-12.webp" alt="MOHA 高保真界面 12"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-13.webp" alt="MOHA 高保真界面 13"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-14.webp" alt="MOHA 高保真界面 14"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-15.webp" alt="MOHA 高保真界面 15"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-16.webp" alt="MOHA 高保真界面 16"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-17.webp" alt="MOHA 高保真界面 17"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-18.webp" alt="MOHA 高保真界面 18"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-19.webp" alt="MOHA 高保真界面 19"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-20.webp" alt="MOHA 高保真界面 20"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-21.webp" alt="MOHA 高保真界面 21"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-22.webp" alt="MOHA 高保真界面 22"  loading="lazy" width="266" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-23.webp" alt="MOHA 高保真界面 23"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-24.webp" alt="MOHA 高保真界面 24"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-25.webp" alt="MOHA 高保真界面 25"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-26.webp" alt="MOHA 高保真界面 26"  loading="lazy" width="646" height="1400"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-27.webp" alt="MOHA 高保真界面 27"  loading="lazy"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-28.webp" alt="MOHA 高保真界面 28"  loading="lazy"/></div>
+        <div class="hifi-gallery__item"><img src="images/moha/interface/iPhone16-29.webp" alt="MOHA 高保真界面 29"  loading="lazy"/></div>
+      </div>
+    </section>
+
+    <!-- 07 RESULTS & REFLECTION -->
+    <section class="project__block reveal">
+      <h2><span class="zh">成果与反思</span><span class="en">Results &amp; Reflection</span></h2>
+      <p><span class="zh">项目在 Interaction Design Studio 3 (MDC5210) 中获得 <strong>HD (82)</strong>。评卷人认为整体视觉风格与一致性出色，AR 体验增添了 thoughtful 的触感，支付流程也经过了清晰思考。</span><span class="en">The project received <strong>HD (82)</strong> in Interaction Design Studio 3 (MDC5210). The assessor praised the overall visual style and consistency, noted the thoughtful AR experience, and found the payment flow clearly considered.</span></p>
+      <div class="result-badges">
+        <div class="badge badge--grade">
+          <span class="badge__label"><span class="zh">课程成绩</span><span class="en">Course Grade</span></span>
+          <span class="badge__value">HD</span>
+          <span class="badge__sub">82 / 100</span>
+        </div>
+        <div class="badge badge--pres">
+          <span class="badge__label"><span class="zh">设计焦点</span><span class="en">Design Focus</span></span>
+          <span class="badge__value">3</span>
+          <span class="badge__sub"><span class="zh">展示 · 定制 · 礼赠</span><span class="en">Showcase · Customize · Gift</span></span>
+        </div>
+      </div>
+      <figure class="proj-img">
+        <img src="images/moha/moha-07.webp" alt="成果与反思：课程成绩 HD 82 与导师反馈"  loading="lazy" width="1400" height="788"/>
+        <figcaption><span class="zh">课程成绩与导师反馈摘录</span><span class="en">Course grade and assessor feedback excerpts.</span></figcaption>
+      </figure>
+      <div class="reflection">
+        <h3><span class="zh">反思与收获</span><span class="en">Takeaways</span></h3>
+        <p><span class="zh">深化了对文化叙事与电商流程平衡的理解；提升了对艺术作品数字化呈现的敏感度；强化了在博物馆"混合空间"（实体+数字）中的设计能力。</span><span class="en">Deepened understanding of balancing cultural storytelling with e-commerce flows; increased sensitivity to digital art presentation; strengthened design skills in the museum's hybrid physical-digital space.</span></p>
+      </div>
+    </section>
+
+    <!-- 08 CLOSING -->
+    <section class="project__block reveal">
+      <h2><span class="zh">项目结语</span><span class="en">Closing</span></h2>
+      <figure class="proj-img">
+        <img src="images/moha/moha-08.webp" alt="项目结语：探索、收藏并体验 MOHA 的艺术世界"  loading="lazy" width="1400" height="788"/>
+        <figcaption><span class="zh">"探索、收藏并体验 MOHA 的艺术世界"</span><span class="en">"Explore, collect, and experience the world of MOHA art."</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- NEXT -->
+    <a class="project__next reveal" href="space.html">
+      <span class="zh">下一个：Life in Orbit →</span><span class="en">Next: Life in Orbit →</span>
+    </a>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 赖嘉豪 · Jiahao Lai</span>
+    <span class="zh">MOHA 艺术博物馆 APP · 项目详情</span><span class="en">MOHA Art Museum App · Project Detail</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
