@@ -430,6 +430,47 @@ img { max-width: 100%; display: block; }
 @media (max-width: 880px) { .hifi-gallery { grid-template-columns: repeat(3, 1fr); gap: 12px; } }
 @media (max-width: 640px) { .hifi-gallery { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
 
+/* Interface gallery for web / platform project pages (MDL, etc.) */
+.interface-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 22px; align-items: stretch; }
+.interface-card { margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--bg-alt); display: flex; flex-direction: column; }
+.interface-card__media { position: relative; width: 100%; height: clamp(320px, 36vw, 480px); overflow: hidden; display: flex; align-items: center; justify-content: center; background: #fff; cursor: zoom-in; }
+.interface-card__media img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; transition: filter .25s var(--ease); }
+.interface-card:hover .interface-card__media img { filter: brightness(0.97); }
+.interface-card figcaption { padding: 12px 14px; font-size: 13px; color: var(--muted); text-align: center; margin-top: auto; }
+.interface-card figcaption strong { display: block; color: var(--fg); font-weight: 700; font-size: 14px; margin-bottom: 2px; }
+
+/* Cropped full-page segments shown as a vertical stack */
+.page-segments { display: flex; flex-direction: column; gap: 18px; margin-top: 22px; }
+.page-segment { margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--bg-alt); }
+.page-segment__media { position: relative; width: 100%; height: clamp(380px, 46vw, 620px); overflow: hidden; display: flex; align-items: center; justify-content: center; background: #fff; cursor: zoom-in; }
+.page-segment__media img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; transition: filter .25s var(--ease); }
+.page-segment:hover .page-segment__media img { filter: brightness(0.97); }
+.page-segment figcaption { padding: 12px 14px; font-size: 13px; color: var(--muted); text-align: center; }
+.page-segment figcaption strong { color: var(--fg); font-weight: 700; }
+
+@media (max-width: 880px) {
+  .interface-grid { grid-template-columns: 1fr; }
+  .interface-card__media { height: clamp(300px, 58vw, 420px); }
+  .page-segment__media { height: clamp(320px, 62vw, 520px); }
+}
+
+/* Small interactive component cards (MDL key components) */
+.component-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 22px; }
+.component-card { margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--bg-alt); display: flex; flex-direction: column; }
+.component-card__media { position: relative; width: 100%; height: clamp(180px, 20vw, 260px); overflow: hidden; display: flex; align-items: center; justify-content: center; background: #fff; cursor: zoom-in; }
+.component-card__media img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; transition: filter .25s var(--ease); }
+.component-card:hover .component-card__media img { filter: brightness(0.97); }
+.component-card figcaption { padding: 11px 13px; font-size: 13px; color: var(--muted); text-align: center; margin-top: auto; line-height: 1.55; }
+.component-card figcaption strong { display: block; color: var(--fg); font-weight: 700; font-size: 14px; margin-bottom: 3px; }
+
+@media (max-width: 880px) {
+  .component-grid { grid-template-columns: repeat(2, 1fr); }
+  .component-card__media { height: clamp(170px, 42vw, 240px); }
+}
+@media (max-width: 640px) {
+  .component-grid { grid-template-columns: 1fr; }
+}
+
 /* Two presentation photos side by side, then a full-width result image below */
 .report-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 22px; }
 .report-duo figure { margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--bg-alt); }

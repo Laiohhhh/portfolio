@@ -91,7 +91,7 @@
   }
 
   // 项目页真实图片：点击放大，自动取 figure 的 figcaption 作为图注
-  document.querySelectorAll(".proj-img img, .media-grid img, .client-logo img, .duo img, .chatbot-showcase__img img, .report-duo img, .hifi-gallery__item img, .research-card__media img, .journey-scenario-card__media img, .artifact-card__media img").forEach(function (img) {
+  document.querySelectorAll(".proj-img img, .media-grid img, .client-logo img, .duo img, .chatbot-showcase__img img, .report-duo img, .hifi-gallery__item img, .research-card__media img, .journey-scenario-card__media img, .artifact-card__media img, .interface-card__media img, .page-segment__media img, .component-card__media img").forEach(function (img) {
     img.addEventListener("click", function () {
       var fig = img.closest("figure");
       var label = "";
