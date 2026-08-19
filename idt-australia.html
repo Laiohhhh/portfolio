@@ -7,8 +7,7 @@
   <meta name="description" content="IDT Australia 制药企业官网 UI/UX 重构案例研究：信息架构优化、战略能力前置、聊天机器人整合。" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
-<button class="btn-pdf" onclick="window.print()" aria-label="导出 PDF">↓ 导出 PDF</button> class="lang-zh">
+<body class="lang-zh">
   <!-- ===== NAV ===== -->
   <header class="nav" id="nav">
     <a href="index.html" class="nav__logo">Leo<span class="zh"> · 赖嘉豪</span><span class="en"> · Jiahao Lai</span></a>
@@ -29,19 +28,20 @@
     <section class="project__hero reveal">
       <p class="project__eyebrow"><span class="zh">案例研究</span><span class="en">Case Study</span></p>
       <h1>IDT Australia<br /><small style="font-size:.42em;font-weight:400;opacity:.65;"><span class="zh">制药企业官网 UI/UX 重构</span><span class="en">Pharma Corporate Website Redesign</span></small></h1>
-      <div class="project__meta">
-        <span><span class="zh">角色</span><span class="en">Role</span>：UX / UI 交互设计师</span>
-        <span><span class="zh">项目周期</span><span class="en">Duration</span>：5–6 周</span>
-        <span><span class="zh">类型</span><span class="en">Type</span>：校企合作 · B2B 网站</span>
-        <span><span class="zh">年份</span><span class="en">Year</span>：2025</span>
-        <span><span class="zh">工具</span><span class="en">Tools</span>：Figma · ProtoPie</span>
-      </div>
+      <ul class="project__tags">
+        <li><span class="zh">用户研究</span><span class="en">UX Research</span></li>
+        <li><span class="zh">界面设计</span><span class="en">UI Design</span></li>
+        <li><span class="zh">企业官网</span><span class="en">B2B Website</span></li>
+        <li>CDMO</li>
+        <li><span class="zh">智能客服</span><span class="en">Chatbot</span></li>
+        <li><span class="zh">信息架构</span><span class="en">Information Architecture</span></li>
+      </ul>
     </section>
 
     <!-- ===== HERO IMAGE ===== -->
     <section class="project__block reveal">
       <figure class="proj-img">
-        <img src="assets/idt-australia/IDT.webp" alt="IDT Australia redesigned website hero with chatbot" loading="lazy"  width="1400" height="788"/>
+        <img src="assets/idt-australia/IDT.jpg" alt="IDT Australia redesigned website hero with chatbot" loading="lazy" />
         <figcaption><span class="zh">重构后的首页与智能客服界面</span><span class="en">Redesigned homepage with AI assistant interface</span></figcaption>
       </figure>
     </section>
@@ -50,25 +50,63 @@
     <section class="project__block reveal">
       <h2><span class="zh">项目概述</span><span class="en">Overview</span></h2>
       <figure class="proj-img">
-        <img src="assets/idt-australia/IDT-1.webp" alt="Project overview slide" loading="lazy"  width="1400" height="788"/>
+        <img src="assets/idt-australia/project-brief.png" alt="IDT 项目任务书：行业背景与设计挑战" loading="lazy" />
+        <figcaption><span class="zh">校企合作任务书：Digital Discovery 挑战陈述</span><span class="en">Industry partnership brief: the Digital Discovery challenge statement</span></figcaption>
       </figure>
       <p>
         <span class="zh">本项目为 IDT Australia（墨尔本制药 CDMO）交付的官网 UX 重设计。由莫纳什大学跨学科团队承接，整合设计、信息技术、药学与战略传播视角，围绕 IDT 的业务目标与数字沟通需求展开，最终成果向 IDT 管理层正式汇报。</span>
         <span class="en">A website UX redesign delivered for IDT Australia, a Melbourne-based pharma CDMO. Carried out by a cross-disciplinary Monash University team spanning design, IT, pharmacy, and strategic communication, the work was grounded in IDT's business goals and digital communication needs, and presented to IDT leadership.</span>
       </p>
-      <ul style="margin-top:14px;padding-left:20px;color:#444;">
-        <li><span class="zh">项目类型：行业合作 UX 项目 · B2B 官网设计</span><span class="en">Type: Industry collaboration UX · B2B website</span></li>
-        <li><span class="zh">合作方：IDT Australia（墨尔本制药 CDMO）</span><span class="en">Partner: IDT Australia (Melbourne pharma CDMO)</span></li>
-        <li><span class="zh">角色：UX/UI 交互设计师（跨职能协作）</span><span class="en">Role: UX/UI Interaction Designer (cross-functional)</span></li>
-      </ul>
+      <p>
+        <span class="zh">项目起点来自校企合作的正式任务书，核心挑战被定义为 <em>Digital Discovery — Making it easier to work with IDT online</em>：如何让生物科技初创公司更顺畅地在官网发现、理解 IDT 的服务能力，并建立联系。任务书同时指出，网站往往是 Biotech 与 CDMO 的首次接触点，它不仅是数字名片，更是建立信任、传递专业能力、邀请深度合作的关键入口。</span>
+        <span class="en">The project began with a formal industry partnership brief. The core challenge was framed as <em>Digital Discovery — Making it easier to work with IDT online</em>: how might biotech innovators discover, understand, and engage with IDT through the website. The brief also emphasized that the website is often the first point of contact between a biotech company and a CDMO — not just a digital presence, but a key entry point for building trust, communicating expertise, and inviting meaningful collaboration.</span>
+      </p>
+      <div class="project__infobox">
+        <dl>
+          <div class="kpi">
+            <dt><span class="zh">角色</span><span class="en">Role</span></dt>
+            <dd><span class="zh">UX/UI 交互设计师（跨职能协作）</span><span class="en">UX/UI Interaction Designer (cross-functional)</span></dd>
+          </div>
+          <div class="kpi">
+            <dt><span class="zh">周期</span><span class="en">Duration</span></dt>
+            <dd><span class="zh">5–6 周</span><span class="en">5–6 weeks</span></dd>
+          </div>
+          <div class="kpi">
+            <dt><span class="zh">类型</span><span class="en">Type</span></dt>
+            <dd><span class="zh">校企合作 · B2B 官网设计</span><span class="en">Industry collaboration · B2B website</span></dd>
+          </div>
+          <div class="kpi">
+            <dt><span class="zh">年份</span><span class="en">Year</span></dt>
+            <dd>2025</dd>
+          </div>
+          <div class="kpi">
+            <dt><span class="zh">工具</span><span class="en">Tools</span></dt>
+            <dd>Figma · ProtoPie</dd>
+          </div>
+          <div class="kpi">
+            <dt><span class="zh">合作方</span><span class="en">Partner</span></dt>
+            <dd><span class="zh">IDT Australia（墨尔本制药 CDMO，50+ 年经验 · TGA/FDA 认证 GMP 设施）</span><span class="en">IDT Australia (Melbourne pharma CDMO, 50+ years · TGA/FDA-accredited GMP facilities)</span></dd>
+          </div>
+        </dl>
+      </div>
     </section>
 
     <!-- ===== CLIENT CONTEXT ===== -->
     <section class="project__block reveal">
       <h2><span class="zh">客户背景</span><span class="en">Client Context</span></h2>
-      <figure class="proj-img">
-        <img src="assets/idt-australia/IDT-2.webp" alt="Client overview slide" loading="lazy"  width="1400" height="788"/>
+      <figure class="client-logo">
+        <img src="assets/idt-australia/idt-logo.jpeg" alt="IDT Australia 品牌标识" loading="lazy" />
       </figure>
+      <div class="media-grid">
+        <figure>
+          <img src="assets/idt-australia/work-scene-1.webp" alt="IDT 公司实拍：工厂与产线" loading="lazy" />
+          <figcaption><span class="zh">公司实拍</span><span class="en">On-site</span></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/idt-australia/work-scene-2.jpeg" alt="IDT 公司实拍：工作现场" loading="lazy" />
+          <figcaption><span class="zh">公司实拍</span><span class="en">On-site</span></figcaption>
+        </figure>
+      </div>
       <p>
         <span class="zh">IDT Australia 是一家总部位于墨尔本的制药 CDMO（合同开发与生产组织），拥有 50 余年行业经验。在高度监管的制药环境中，IDT 提供从原料药（API）到成品制剂的端到端制造服务。其服务体系覆盖范围广、技术复杂，这也为数字沟通带来挑战——如何在官网等数字渠道中清晰传达服务重点、核心能力与差异化价值，成为本项目需要重点回应的问题。</span>
         <span class="en">IDT Australia is a Melbourne-based pharmaceutical CDMO with over 50 years of industry experience. In a highly regulated environment, they provide end-to-end services from API to finished dosage manufacturing. Their broad, technically complex service system creates a communication challenge: how to clearly convey service focus, core capabilities, and differentiated value through digital channels.</span>
@@ -81,11 +119,11 @@
       <p class="project__hint"><span class="zh">项目由莫纳什大学跨学科团队交付，成员涵盖设计、信息技术、药学与战略传播，协同支撑从用户调研到设计落地的完整流程。</span><span class="en">Delivered by a cross-disciplinary Monash University team spanning design, IT, pharmacy, and strategic communication—driving the full journey from user research to design delivery.</span></p>
       <div class="media-grid">
         <figure>
-          <img src="assets/idt-australia/team.webp" alt="跨学科团队合影" loading="lazy"  width="1400" height="1050"/>
+          <img src="assets/idt-australia/team.jpg" alt="跨学科团队合影" loading="lazy" />
           <figcaption><span class="zh">跨学科团队合影</span><span class="en">Cross-disciplinary team</span></figcaption>
         </figure>
         <figure>
-          <img src="assets/idt-australia/team-map.webp" alt="成员学科分布" loading="lazy"  width="1400" height="788"/>
+          <img src="assets/idt-australia/team-map.jpg" alt="成员学科分布" loading="lazy" />
           <figcaption><span class="zh">成员学科分布</span><span class="en">Team discipline mix</span></figcaption>
         </figure>
       </div>
@@ -99,7 +137,7 @@
         <span class="en">For biotech companies, the corporate website is often the first point of contact with potential partners. It's more than a digital presence—it's an opportunity to build trust, communicate expertise, and invite meaningful collaboration.</span>
       </p>
       <div class="stakeholder" style="margin-top:22px;">
-        <img src="assets/idt-australia/people/jim-sosic.webp" alt="Jim Sosic, COO" loading="lazy"  width="720" height="720"/>
+        <img src="assets/idt-australia/people/jim-sosic.jpg" alt="Jim Sosic, COO" loading="lazy" />
         <div>
           <div class="stakeholder__name">Jim Sosic · <span class="zh">首席运营官</span><span class="en">COO</span></div>
           <div class="stakeholder__role"><span class="zh">整体目标</span><span class="en">Overall goal</span></div>
@@ -111,29 +149,110 @@
       </blockquote>
     </section>
 
-    <!-- ===== UX STRATEGY ===== -->
+    <!-- ===== RESEARCH & DISCOVERY ===== -->
+    <section class="project__block reveal">
+      <h2><span class="zh">研究与发现</span><span class="en">Research &amp; Discovery</span></h2>
+      <p class="project__hint"><span class="zh">所有设计策略均建立在真实业务语境与一手调研之上。我们实地参观墨尔本制药工厂、与 IDT 管理层深度访谈，并借助商业画布（Lean Canvas）将零散洞察系统收敛为清晰的设计方向。</span><span class="en">Every design strategy was grounded in real business context and first-hand research. We visited the Melbourne manufacturing facility, interviewed IDT leadership, and used a Lean Canvas to converge scattered insights into clear design directions.</span></p>
+      <div class="research-grid">
+        <div class="research-card reveal">
+          <h3><span class="zh">利益相关者访谈</span><span class="en">Stakeholder Interviews</span></h3>
+          <p><span class="zh">在 IDT 现场与 COO、商务总监、商业合作经理等关键利益相关者深度访谈，识别出「战略重点不清」「核心服务发现成本高」「联系路径模糊」三大关键问题。</span><span class="en">On-site at IDT, in-depth interviews with the COO, Commercial Director and Partnership Manager surfaced three core issues: unclear strategic focus, high friction in discovering core services, and ambiguous contact pathways.</span></p>
+          <figure class="research-card__media">
+            <img src="assets/idt-australia/research/factory-visit-1.jpg" alt="IDT 现场访谈与工厂参观" loading="lazy" />
+          </figure>
+        </div>
+
+        <div class="research-card reveal">
+          <h3><span class="zh">实地工厂考察</span><span class="en">Factory Site Visit</span></h3>
+          <p><span class="zh">实地考察 GMP 生产车间与生产流程，理解 API、mRNA、ADC 等业务的真实制造语境，为官网信息架构提供可信赖的一手素材与行业话语体系。</span><span class="en">On-site visits to GMP manufacturing areas and workflows built an authentic understanding of API, mRNA, and ADC operations—providing credible content and industry vocabulary for the website architecture.</span></p>
+          <figure class="research-card__media">
+            <img src="assets/idt-australia/factory.jpg" alt="IDT 墨尔本工厂实地参观" loading="lazy" />
+          </figure>
+        </div>
+
+        <div class="research-card reveal">
+          <h3><span class="zh">洞察 → 策略（商业画布）</span><span class="en">Insights → Strategy (Lean Canvas)</span></h3>
+          <p><span class="zh">将访谈与现场观察聚类后，用 Lean Canvas 收敛为三项设计策略：明确战略重点、前置核心服务、降低参与门槛，直接回应 IDT 管理层提出的业务诉求。</span><span class="en">Clustering interview and site-visit findings into a Lean Canvas produced three strategies—clarify strategic focus, front-load core services, lower engagement barriers—directly addressing leadership's business goals.</span></p>
+          <figure class="research-card__media">
+            <img src="assets/idt-australia/research/lean-canvas.png" alt="Lean Canvas 商业画布推导" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== UX STRATEGY (lightweight cards) ===== -->
     <section class="project__block reveal">
       <h2><span class="zh">UX 策略</span><span class="en">UX Strategy</span></h2>
       <p>
-        <span class="zh">为制定真实可信的策略，我们与 IDT 多位利益相关者深度访谈，并实地参观其墨尔本工厂与生产设施。这些来自一线业务与真实场景的洞察，被系统转化为以下三项优化策略。</span>
-        <span class="en">To ground our strategy in reality, we interviewed multiple IDT stakeholders and visited their Melbourne factory and production facilities. These first-hand insights from business and the real site were translated into the three optimization strategies below.</span>
+        <span class="zh">基于研究与发现阶段的一手洞察，我们将 IDT 的业务重点转化为以下三项轻量化策略，直接回应管理层提出的核心诉求。</span>
+        <span class="en">Built on first-hand insights from the research phase, we translated IDT's business priorities into three lightweight strategies that directly answer leadership's core goals.</span>
       </p>
-      <figure class="proj-img">
-        <img src="assets/idt-australia/factory.webp" alt="IDT 墨尔本工厂实地参观" loading="lazy"  width="1400" height="1050"/>
-        <figcaption><span class="zh">IDT 墨尔本工厂实地参观 · 一线洞察来源</span><span class="en">On-site factory visit · source of first-hand insight</span></figcaption>
-      </figure>
-      <div class="strategy-grid">
-        <div class="strategy-card reveal">
-          <strong>01</strong> <span class="zh">明确战略重点</span><span class="en">Clarify Strategic Focus</span>
-          <p><span class="zh">用户首访即清晰感知 IDT 关键增长领域与核心优势。</span><span class="en">Visitors immediately grasp key growth areas and core strengths.</span></p>
+      <div class="strategy-lite-grid">
+        <div class="strategy-lite-card reveal">
+          <span class="strategy-lite-card__no">01</span>
+          <h3><span class="zh">明确战略重点</span><span class="en">Clarify Strategic Focus</span></h3>
+          <p><span class="zh">在首页优先呈现 mRNA 与 ADC 等增长型能力，让访客首访即理解 IDT 的核心优势与方向。</span><span class="en">Front-load growth capabilities like mRNA &amp; ADC on the homepage so visitors grasp IDT's strengths and direction on first visit.</span></p>
         </div>
-        <div class="strategy-card reveal">
-          <strong>02</strong> <span class="zh">前置核心服务</span><span class="en">Front-load Core Services</span>
-          <p><span class="zh">制造与研发服务提前呈现，降低用户寻找成本。</span><span class="en">Manufacturing & R&D services surfaced early to reduce friction.</span></p>
+        <div class="strategy-lite-card reveal">
+          <span class="strategy-lite-card__no">02</span>
+          <h3><span class="zh">前置核心服务</span><span class="en">Front-load Core Services</span></h3>
+          <p><span class="zh">将 API 制造与研发服务提前呈现，显著降低用户寻找关键信息的成本与路径长度。</span><span class="en">Surface API manufacturing and R&amp;D services early, sharply reducing the cost and path length of finding key information.</span></p>
         </div>
-        <div class="strategy-card reveal">
-          <strong>03</strong> <span class="zh">降低参与门槛</span><span class="en">Lower Engagement Barriers</span>
-          <p><span class="zh">清晰可及的联系路径 + 聊天机器人引导轻量探索。</span><span class="en">Clear contact pathways + chatbot-guided lightweight exploration.</span></p>
+        <div class="strategy-lite-card reveal">
+          <span class="strategy-lite-card__no">03</span>
+          <h3><span class="zh">降低参与门槛</span><span class="en">Lower Engagement Barriers</span></h3>
+          <p><span class="zh">以清晰的联系路径叠加聊天机器人引导，让新老客户都能轻量地发起合作与咨询。</span><span class="en">Clear contact pathways plus a chatbot guide let both new and existing clients start collaboration and queries lightly.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PLANNING & RESOURCES (artifact cards) ===== -->
+    <section class="project__block reveal">
+      <h2><span class="zh">规划与资源</span><span class="en">Planning &amp; Resources</span></h2>
+      <p class="project__hint"><span class="zh">策略落地离不开清晰的预算与资源盘算。我们以商业画布推导范围，并据此规划预算分配、对接关键资源与利益相关方，确保方案在真实组织约束下可执行。</span><span class="en">Strategy execution depends on clear budgeting and resource mapping. We derived scope from the business canvas, then planned budget allocation and aligned key resources and stakeholders so the solution stays executable within real organizational constraints.</span></p>
+      <div class="artifact-grid">
+        <div class="artifact-card reveal">
+          <figure class="artifact-card__media">
+            <img src="assets/idt-australia/research/budget-estimate.png" alt="预算分析 Budget Estimate" loading="lazy" />
+          </figure>
+          <h4><span class="zh">预算分析</span><span class="en">Budget Estimate</span></h4>
+          <p><span class="zh">按范围与阶段盘算投入，让设计决策有成本边界可依。</span><span class="en">Scope- and phase-based investment planning gives design decisions a cost boundary to respect.</span></p>
+        </div>
+        <div class="artifact-card reveal">
+          <figure class="artifact-card__media">
+            <img src="assets/idt-australia/research/resources-stakeholders.png" alt="资源与利益相关方 Resources & Stakeholders" loading="lazy" />
+          </figure>
+          <h4><span class="zh">资源与利益相关方</span><span class="en">Resources &amp; Stakeholders</span></h4>
+          <p><span class="zh">对齐内部能力与外部协作方，明确谁为方案落地提供保障。</span><span class="en">Align internal capability and external partners to clarify who backs execution.</span></p>
+        </div>
+        <div class="artifact-card reveal">
+          <figure class="artifact-card__media">
+            <img src="assets/idt-australia/research/stakeholder-map.png" alt="利益相关方影响矩阵 Stakeholder Map" loading="lazy" />
+          </figure>
+          <h4><span class="zh">利益相关方影响矩阵</span><span class="en">Stakeholder Influence Map</span></h4>
+          <p><span class="zh">区分决策与协作关键人，指导沟通与推进节奏。</span><span class="en">Separate decision-makers from collaborators to guide communication and momentum.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== USER JOURNEY & USAGE SCENARIOS ===== -->
+    <section class="project__block reveal">
+      <h2><span class="zh">用户旅程与使用场景</span><span class="en">User Journey &amp; Usage Scenarios</span></h2>
+      <p class="project__hint"><span class="zh">我们将抽象策略落到真实使用脉络：用户旅程图描绘从「首次访问」到「建立合作」的完整体验路径，使用场景图则锚定医护与商务两类核心角色的典型任务情境。</span><span class="en">We grounded abstract strategy in real usage: the journey map traces the full path from first visit to partnership, while scenario maps anchor typical tasks for clinical and commercial user roles.</span></p>
+      <div class="journey-scenario-grid">
+        <div class="journey-scenario-card reveal">
+          <figure class="journey-scenario-card__media">
+            <img src="assets/idt-australia/research/user-journey.jpg" alt="用户旅程图 User Journey Map" loading="lazy" />
+          </figure>
+          <h3><span class="zh">用户旅程图</span><span class="en">User Journey Map</span></h3>
+          <p><span class="zh">首访 → 探索能力 → 发起联系 → 建立合作，逐阶段暴露痛点与机会。</span><span class="en">First visit → explore capabilities → reach out → partner, exposing pain points and opportunities per stage.</span></p>
+        </div>
+        <div class="journey-scenario-card reveal">
+          <figure class="journey-scenario-card__media">
+            <img src="assets/idt-australia/research/usage-scenario.jpg" alt="使用场景图 Usage Scenarios" loading="lazy" />
+          </figure>
+          <h3><span class="zh">使用场景图</span><span class="en">Usage Scenarios</span></h3>
+          <p><span class="zh">锚定医护与商务两类核心角色，明确各自的高频任务与决策情境。</span><span class="en">Anchors clinical and commercial roles, clarifying their high-frequency tasks and decision contexts.</span></p>
         </div>
       </div>
     </section>
@@ -141,7 +260,7 @@
     <!-- ===== SOLUTION (big heading + numbered sub-solutions) ===== -->
     <section class="project__block reveal">
       <div class="solution-head">
-        <img class="solution-logo" src="assets/logos/idt.webp" alt="IDT Australia"  loading="lazy" width="200" height="156"/>
+        <img class="solution-logo" src="assets/logos/idt.png" alt="IDT Australia" />
         <h2><span class="zh">方案</span><span class="en">Solution</span></h2>
       </div>
       <p class="solution-intro">
@@ -154,7 +273,7 @@
         <div class="solution-item__no">01</div>
         <div class="solution-item__body">
           <div class="stakeholder">
-            <img src="assets/idt-australia/people/michael-thompson.webp" alt="Michael B Thompson" loading="lazy"  width="720" height="720"/>
+            <img src="assets/idt-australia/people/michael-thompson.jpg" alt="Michael B Thompson" loading="lazy" />
             <div>
               <div class="stakeholder__name">Michael B Thompson</div>
               <div class="stakeholder__role"><span class="zh">商务与业务发展总监</span><span class="en">Commercial &amp; BD Director</span></div>
@@ -169,7 +288,7 @@
             <span class="en">For this strategic priority, we front-loaded <strong>mRNA &amp; ADC capabilities on the homepage</strong> so visitors immediately grasp IDT's growth direction, with a dedicated module for depth.</span>
           </p>
           <figure class="proj-img">
-            <img src="assets/idt-australia/web/mrna.webp" alt="mRNA 与 ADCs 能力模块" loading="lazy"  width="1400" height="890"/>
+            <img src="assets/idt-australia/web/mrna.jpg" alt="mRNA 与 ADCs 能力模块" loading="lazy" />
             <figcaption><span class="zh">mRNA &amp; ADCs 能力模块</span><span class="en">mRNA &amp; ADCs capability module</span></figcaption>
           </figure>
         </div>
@@ -180,7 +299,7 @@
         <div class="solution-item__no">02</div>
         <div class="solution-item__body">
           <div class="stakeholder">
-            <img src="assets/idt-australia/people/joe-desneves.webp" alt="Dr. Joe Deseneves" loading="lazy"  width="720" height="720"/>
+            <img src="assets/idt-australia/people/joe-desneves.jpg" alt="Dr. Joe Deseneves" loading="lazy" />
             <div>
               <div class="stakeholder__name">Dr. Joe Deseneves</div>
               <div class="stakeholder__role"><span class="zh">商业合作经理</span><span class="en">Commercial Partnership Manager</span></div>
@@ -195,7 +314,7 @@
             <span class="en">We <strong>front-loaded the API manufacturing module</strong> into the homepage's core area with a clear contact pathway, making IDT's core competency and credibility immediately visible.</span>
           </p>
           <figure class="proj-img">
-            <img src="assets/idt-australia/web/api.webp" alt="API 制造能力模块" loading="lazy"  width="1400" height="731"/>
+            <img src="assets/idt-australia/web/api.jpg" alt="API 制造能力模块" loading="lazy" />
             <figcaption><span class="zh">API 制造能力模块 · 清晰联系路径</span><span class="en">API manufacturing module · clear contact pathway</span></figcaption>
           </figure>
         </div>
@@ -206,7 +325,7 @@
         <div class="solution-item__no">03</div>
         <div class="solution-item__body">
           <div class="stakeholder">
-            <img src="assets/idt-australia/people/mel-murray.webp" alt="Dr. Melanie Murray" loading="lazy"  width="720" height="699"/>
+            <img src="assets/idt-australia/people/mel-murray.jpg" alt="Dr. Melanie Murray" loading="lazy" />
             <div>
               <div class="stakeholder__name">Dr. Melanie Murray</div>
               <div class="stakeholder__role"><span class="zh">销售协调员</span><span class="en">Sales Coordinator</span></div>
@@ -222,7 +341,7 @@
           </p>
           <!-- 关于页 单独展示 -->
           <figure class="proj-img">
-            <img src="assets/idt-australia/web/about.webp" alt="关于页 · 企业可信度" loading="lazy"  width="1400" height="734"/>
+            <img src="assets/idt-australia/web/about.jpg" alt="关于页 · 企业可信度" loading="lazy" />
             <figcaption><span class="zh">关于页 · 企业可信度</span><span class="en">About page · corporate credibility</span></figcaption>
           </figure>
           <!-- IDT 智能客服：logo 左 + 页面右 -->
@@ -233,11 +352,11 @@
           </p>
           <div class="chatbot-showcase">
             <div class="chatbot-showcase__brand">
-              <img src="assets/idt-australia/web/idti.webp" alt="IDTI 智能客服"  loading="lazy" width="1000" height="1000"/>
+              <img src="assets/idt-australia/web/idti.png" alt="IDTI 智能客服" />
               <p><span class="zh">IDT 智能客服嵌入官网，提供 7×24 的初步咨询与联系引导，让用户无需等待即可获取基础信息。</span><span class="en">Embedded across the site, the IDT assistant offers 24/7 initial inquiry and contact guidance so users get basics without waiting.</span></p>
             </div>
             <figure class="chatbot-showcase__img">
-              <img src="assets/idt-australia/web/chatbot.webp" alt="AI 聊天机器人界面" loading="lazy"  width="780" height="1400"/>
+              <img src="assets/idt-australia/web/chatbot.jpg" alt="AI 聊天机器人界面" loading="lazy" />
               <figcaption><span class="zh">聊天机器人界面 · 早期咨询引导</span><span class="en">Chatbot UI · early inquiry guidance</span></figcaption>
             </figure>
           </div>
@@ -246,7 +365,7 @@
       <!-- 落地网页 · 首页全貌 -->
       <h3 class="solution-sub"><span class="zh">落地网页 · 首页全貌</span><span class="en">Delivered Site · Homepage</span></h3>
       <figure class="proj-img">
-        <img src="assets/idt-australia/web/homepage.webp" alt="IDT 首页全貌" loading="lazy"  width="764" height="1400"/>
+        <img src="assets/idt-australia/web/homepage.jpg" alt="IDT 首页全貌" loading="lazy" />
         <figcaption><span class="zh">首页全貌 · 战略能力前置</span><span class="en">Homepage · front-loaded capabilities</span></figcaption>
       </figure>
     </section>
@@ -257,8 +376,8 @@
       <div class="test-grid">
         <div class="test-card">
           <h3><span class="zh">测试一：首页战略入口</span><span class="en">Test 1: Homepage Strategic Entry</span></h3>
-          <figure class="proj-img">
-            <img src="assets/idt-australia/heatmap-1.webp" alt="点击测试一 热点图" loading="lazy"  width="1400" height="894"/>
+          <figure class="proj-img proj-img--fixed">
+            <img src="assets/idt-australia/heatmap-1.jpg" alt="点击测试一热点图：mRNA/ADCs 任务成功率 80%，平均操作时间 20 秒" loading="lazy" />
           </figure>
           <dl class="metric">
             <dt><span class="zh">任务</span><span class="en">Task</span></dt>
@@ -273,8 +392,8 @@
         </div>
         <div class="test-card">
           <h3><span class="zh">测试二：联系路径</span><span class="en">Test 2: Contact Pathway</span></h3>
-          <figure class="proj-img">
-            <img src="assets/idt-australia/heatmap-2.webp" alt="点击测试二 热点图" loading="lazy"  width="1400" height="753"/>
+          <figure class="proj-img proj-img--fixed">
+            <img src="assets/idt-australia/heatmap-2.jpg" alt="点击测试二热点图：联系路径任务成功率 70%，平均操作时间 8 秒" loading="lazy" />
           </figure>
           <dl class="metric">
             <dt><span class="zh">任务</span><span class="en">Task</span></dt>
@@ -288,7 +407,7 @@
           </dl>
         </div>
       </div>
-      <p class="block-summary"><span class="zh">两轮点击测试覆盖「战略入口」与「联系路径」两条关键任务：核心信息任务成功率分别达 80% 与 70%，平均操作时间压缩至 20s 与 8s——相比原有邮件 / 电话人工跟进（约 1–2 天），关键信息获取门槛被显著降低。热点图直观呈现了用户在首页与聊天机器人上的有效点击集中区。</span><span class="en">Two click-test rounds covered the "strategic entry" and "contact pathway" tasks: core-info success rates reached 80% and 70%, with average task time cut to 20s and 8s—versus the old 1–2 day email/phone follow-up, the barrier to key info dropped sharply. Heatmaps show where users clicked most on the homepage and the chatbot.</span></p>
+      <p class="block-summary"><span class="zh">两轮点击测试覆盖「战略入口」与「联系路径」两条关键任务：核心信息任务成功率分别达 80% 与 70%，平均操作时间压缩至 20s 与 8s——相比原有邮件 / 电话人工跟进（约 1–2 天），关键信息获取门槛被显著降低。完整测试幻灯片直观呈现了测试问题、样本、成功率与操作时间，以及用户在首页与聊天机器人上的有效点击集中区。</span><span class="en">Two click-test rounds covered the "strategic entry" and "contact pathway" tasks: core-info success rates reached 80% and 70%, with average task time cut to 20s and 8s—versus the old 1–2 day email/phone follow-up, the barrier to key info dropped sharply. The full test slides present the task, sample size, success rate, and time alongside the heatmaps showing where users clicked most on the homepage and the chatbot.</span></p>
     </section>
 
     <!-- ===== RESULTS ===== -->
@@ -296,16 +415,16 @@
       <h2><span class="zh">成果</span><span class="en">Results</span></h2>
       <div class="report-duo">
         <figure>
-          <img src="assets/idt-australia/presentation.webp" alt="阶段一 项目汇报" loading="lazy"  width="1400" height="1050"/>
+          <img src="assets/idt-australia/presentation.jpg" alt="阶段一 项目汇报" loading="lazy" />
           <figcaption><span class="zh">阶段一 项目汇报</span><span class="en">Phase 1 · Project presentation</span></figcaption>
         </figure>
         <figure>
-          <img src="assets/idt-australia/presentation-3.webp" alt="阶段二 成果评审" loading="lazy"  width="1400" height="1050"/>
+          <img src="assets/idt-australia/presentation-3.jpg" alt="阶段二 成果评审" loading="lazy" />
           <figcaption><span class="zh">阶段二 成果评审</span><span class="en">Phase 2 · Results review</span></figcaption>
         </figure>
       </div>
       <figure class="proj-img" style="margin-top: 16px;">
-        <img src="assets/idt-australia/report-result.webp" alt="汇报结果总览" loading="lazy"  width="1400" height="272"/>
+        <img src="assets/idt-australia/report-result.png" alt="汇报结果总览" loading="lazy" />
         <figcaption><span class="zh">汇报结果总览 · 关键指标与落地成效</span><span class="en">Presentation results · key metrics &amp; outcomes</span></figcaption>
       </figure>
       <div class="result-badges">

@@ -31,9 +31,11 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* language switching */
-.lang-zh .en { display: none; }
-.lang-en .zh { display: none; }
+/* language switching
+   默认显示中文；仅当 <body> 带 lang-en 时才切换为英文。
+   用 :not(.lang-en) 保证：即使 body 的 lang 类被意外移除，也默认中文（不会出现双语同显）。 */
+body:not(.lang-en) .en { display: none; }
+body.lang-en .zh { display: none; }
 
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
@@ -305,6 +307,14 @@ img { max-width: 100%; display: block; }
 .project__tags { display: flex; flex-wrap: wrap; gap: 10px 12px; margin: 24px 0 0; padding: 0; list-style: none; }
 .project__tags li { font-size: 13px; font-weight: 600; color: var(--accent); background: rgba(47,91,208,0.08); border: 1px solid rgba(47,91,208,0.18); padding: 6px 14px; border-radius: 999px; white-space: nowrap; }
 
+/* Project facts block: pulls meta out of the body copy into a tinted, top-aligned card */
+.project__infobox { margin-top: 36px; background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 26px; }
+.project__infobox dl { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 32px; margin: 0; }
+.project__infobox .kpi { display: flex; flex-direction: column; gap: 5px; align-items: flex-start; text-align: left; }
+.project__infobox dt { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.project__infobox dd { margin: 0; font-size: 15px; color: var(--fg); line-height: 1.5; }
+@media (max-width: 640px) { .project__infobox dl { grid-template-columns: 1fr; } }
+
 /* Numbered challenge cards (1-5 vertical) */
 .challenge-list { display: grid; gap: 12px; margin-top: 22px; }
 .challenge-item { display: flex; gap: 16px; align-items: flex-start; background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; }
@@ -337,7 +347,11 @@ img { max-width: 100%; display: block; }
 /* ===== PROJECT IMAGE FIGURE ===== */
 .proj-img { margin-bottom: 18px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
 .proj-img img { width: 100%; height: auto; display: block; }
+.proj-img--fixed { aspect-ratio: 16 / 10; }
+.proj-img--fixed img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .proj-img figcaption { padding: 10px 16px 0; font-size: 14px; color: var(--muted); text-align: center; }
+.client-logo { margin: 0 auto 26px; width: 100%; max-width: none; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: #fff; display: flex; align-items: center; justify-content: center; min-height: 260px; max-height: clamp(320px, 48vw, 560px); }
+.client-logo img { width: 100%; height: 100%; max-width: 100%; max-height: clamp(320px, 48vw, 560px); display: block; object-fit: contain; }
 .proj-video { width: 100%; margin: 24px 0 20px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: #000; }
 .proj-video video { width: 100%; height: auto; display: block; }
 .proj-video figcaption { padding: 12px 16px 0; font-size: 14px; color: var(--muted); text-align: center; }
@@ -367,6 +381,46 @@ img { max-width: 100%; display: block; }
 .media-grid figure { margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--bg-alt); display: flex; flex-direction: column; }
 .media-grid img { width: 100%; height: clamp(280px, 38vw, 380px); object-fit: contain; object-position: center; display: block; }
 .media-grid figcaption { padding: 12px 14px; font-size: 13px; color: var(--muted); text-align: center; margin-top: auto; }
+
+/* ===== RESEARCH & DISCOVERY CARDS ===== */
+.research-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 28px; align-items: stretch; }
+.research-card {
+  display: flex; flex-direction: column;
+  background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 20px;
+}
+.research-card__media {
+  order: -1;
+  margin: 0 0 16px;
+  border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: #fff;
+  aspect-ratio: 16 / 10;
+}
+.research-card__media img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; cursor: zoom-in; }
+.research-card h3 { font-size: 17px; font-weight: 700; margin: 0 0 10px; line-height: 1.35; min-height: 2.7em; }
+.research-card p { font-size: 14px; line-height: 1.7; color: #444; margin: 0; }
+
+/* Lightweight strategy principle cards (IDT UX Strategy) */
+.strategy-lite-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 24px; align-items: stretch; }
+.strategy-lite-card { background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 20px; display: flex; flex-direction: column; gap: 8px; }
+.strategy-lite-card__no { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+.strategy-lite-card h3 { font-size: 17px; font-weight: 700; margin: 0; line-height: 1.35; min-height: 1.35em; }
+.strategy-lite-card p { font-size: 14px; line-height: 1.7; color: #444; margin: 0; }
+
+/* Journey & scenario cards */
+.journey-scenario-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 24px; align-items: stretch; }
+.journey-scenario-card { background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; display: flex; flex-direction: column; }
+.journey-scenario-card__media { aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: #fff; margin-bottom: 14px; }
+.journey-scenario-card__media img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; cursor: zoom-in; }
+.journey-scenario-card h3 { font-size: 17px; font-weight: 700; margin: 0 0 8px; line-height: 1.35; min-height: 1.35em; }
+.journey-scenario-card p { font-size: 14px; line-height: 1.7; color: #444; margin: 0; }
+
+/* Artifact cards (budget, resources, stakeholder maps) */
+.artifact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 20px; align-items: stretch; }
+.artifact-card { background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; display: flex; flex-direction: column; }
+.artifact-card__media { aspect-ratio: 16 / 10; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: #fff; margin-bottom: 12px; cursor: zoom-in; }
+.artifact-card__media img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; }
+.artifact-card h4 { font-size: 15px; font-weight: 700; margin: 0 0 6px; line-height: 1.35; min-height: 1.35em; }
+.artifact-card p { font-size: 13px; line-height: 1.6; color: #555; margin: 0; }
 
 /* Hi-fi phone-screen gallery for small project pages */
 .hifi-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 22px; }
@@ -450,10 +504,10 @@ img { max-width: 100%; display: block; }
   display: flex; flex-direction: column;
 }
 .test-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 14px; }
-.test-card dl { margin-top: auto; }
+.test-card dl { margin-top: 18px; }
 
-/* 指标列表：标签与大数字「中线对齐」(vertical-center)，避免顶部错开 */
-.metric { display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; align-items: center; font-size: 15px; margin: 0; }
+/* 指标列表：标签与数值顶部对齐 */
+.metric { display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; align-items: start; font-size: 15px; margin: 0; }
 .metric dt { font-weight: 600; color: #2a2a2a; line-height: 1.5; }
 .metric dd { color: #555; line-height: 1.5; }
 .metric dd strong { color: var(--accent); font-size: 22px; font-weight: 800; line-height: 1; }
@@ -566,6 +620,10 @@ img { max-width: 100%; display: block; }
   .hero { grid-template-columns: 1fr; }
   .hero__portrait { max-width: 320px; justify-self: center; }
   .grid--3 { grid-template-columns: repeat(2, 1fr); }
+  .research-grid { grid-template-columns: repeat(2, 1fr); }
+  .strategy-lite-grid { grid-template-columns: repeat(2, 1fr); }
+  .journey-scenario-grid { grid-template-columns: 1fr; }
+  .artifact-grid { grid-template-columns: repeat(2, 1fr); }
   .about { grid-template-columns: 1fr; }
   .gallery { columns: 2; }
   .timeline__item { gap: 14px; padding: 18px 0; }
@@ -574,6 +632,9 @@ img { max-width: 100%; display: block; }
 }
 @media (max-width: 640px) {
   .grid--3 { grid-template-columns: 1fr; }
+  .research-grid { grid-template-columns: 1fr; }
+  .strategy-lite-grid { grid-template-columns: 1fr; }
+  .artifact-grid { grid-template-columns: 1fr; }
   .nav__links {
     position: fixed; top: 64px; right: 0; left: 0;
     flex-direction: column; gap: 0; background: var(--bg);
@@ -700,38 +761,16 @@ img { max-width: 100%; display: block; }
 .thesis { max-width: 940px; margin: 4px auto 0; padding: 52px 0 8px; text-align: center; }
 .thesis__quote { font-size: clamp(22px, 2.7vw, 33px); line-height: 1.5; font-weight: 800; color: var(--fg); letter-spacing: -0.01em; margin: 0; }
 .thesis__quote .zh { display: block; }
-.thesis__quote .en { display: block; font-size: clamp(14px, 1.5vw, 18px); font-weight: 500; color: var(--muted); margin-top: 16px; letter-spacing: 0; }
+body.lang-en .thesis__quote .en { display: block; font-size: clamp(14px, 1.5vw, 18px); font-weight: 500; color: var(--muted); margin-top: 16px; letter-spacing: 0; }
 .thesis__theme { margin: 22px 0 0; font-size: 12.5px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); }
 .thesis-list { list-style: none; margin: 30px 0 0; padding: 0; display: grid; gap: 13px; }
 .thesis-list li { position: relative; padding: 16px 20px 16px 54px; background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius); }
 .thesis-list li::before { content: ""; position: absolute; left: 22px; top: 22px; width: 13px; height: 13px; border-radius: 50%; background: var(--accent); }
 .thesis-list li .zh { display: block; font-size: 16px; line-height: 1.62; color: var(--fg); }
-.thesis-list li .en { display: block; margin-top: 5px; font-size: 13.5px; line-height: 1.55; color: var(--muted); }
+body.lang-en .thesis-list li .en { display: block; margin-top: 5px; font-size: 13.5px; line-height: 1.55; color: var(--muted); }
 .thesis__link { margin: 26px 0 0; padding: 16px 20px; border-top: 2px solid var(--accent); font-size: 14.5px; line-height: 1.7; color: var(--fg); background: linear-gradient(180deg, rgba(47,91,208,.05), rgba(47,91,208,0)); border-radius: 0 0 var(--radius) var(--radius); }
-.thesis__link .en { display: block; margin-top: 6px; color: var(--muted); font-size: 13px; }
+body.lang-en .thesis__link .en { display: block; margin-top: 6px; color: var(--muted); font-size: 13px; }
 @media (max-width: 640px) {
   .thesis { padding: 36px 0 4px; }
   .thesis-list li .zh { font-size: 15px; }
-}
-
-
-/* ===== PRINT / 导出 PDF ===== */
-.btn-pdf{position:fixed;right:18px;bottom:18px;z-index:90;display:inline-flex;align-items:center;gap:6px;
-  padding:10px 16px;border:0;border-radius:999px;background:var(--accent,#f60);color:#fff;font-size:14px;
-  font-weight:600;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.18)}
-.btn-pdf:hover{filter:brightness(.95)}
-@media print{
-  .nav,.menu-toggle,.gallery-filters,.lightbox,.btn-pdf,.lang-toggle{display:none!important}
-  html,body{background:#fff!important;color:#000!important}
-  .reveal{opacity:1!important;transform:none!important}
-  section,.project__block,figure,.card,.gallery__item,.roadmap-card,.value-card,.test-card,
-  .voice-feat,.voice-chip,.ba-col,.strategy-card,.journey-step,.badge,.people-card,.person-card,
-  .solution-item,.stakeholder,.metric,.result-badges,.result-photos,.report-duo,.duo,.media-grid,
-  .hifi-gallery,.strip,.timeline__item,.ba-scene,.ba-cols,.voices__featured,.voices__source,
-  .project-cover,.chatbot-showcase,.fig-note,.project-cover__split{break-inside:avoid}
-  a{color:#000!important;text-decoration:underline}
-  .project{max-width:none!important;padding:0!important}
-  .prototype__frame{height:auto!important}
-  .gallery{columns:3!important}
-  @page{margin:14mm}
 }

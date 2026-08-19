@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodiGo · 智能饮食推荐 APP | Leo 赖嘉豪 — Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .phone-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:18px; }
+    .phone-grid figure { margin:0; border-radius:18px; overflow:hidden; background:#f6f6f6; box-shadow:0 8px 24px rgba(0,0,0,.08); }
+    .phone-grid img { display:block; width:100%; height:auto; }
+    .phone-grid figcaption { padding:10px 12px; font-size:13px; color:var(--muted); text-align:center; }
+    .insight-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-top:18px; }
+    .insight-card { background:var(--bg-alt); border-radius:16px; padding:18px; border-left:4px solid var(--accent); }
+    .insight-card h4 { margin:0 0 8px; font-size:16px; font-weight:700; }
+    .insight-card p { margin:0; font-size:14px; color:var(--muted); line-height:1.7; }
+    @media (max-width: 640px) {
+      .phone-grid { grid-template-columns:repeat(2,1fr); gap:12px; }
+      .insight-grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body class="lang-zh">
+  <header class="nav" id="nav">
+    <a href="index.html" class="nav__logo">Leo<span class="zh"> · 赖嘉豪</span><span class="en"> · Jiahao Lai</span></a>
+    <nav class="nav__links" id="navLinks">
+      <a href="index.html#work"><span class="zh">作品</span><span class="en">Work</span></a>
+      <a href="index.html#photo"><span class="zh">摄影</span><span class="en">Photo</span></a>
+      <a href="index.html#about"><span class="zh">关于</span><span class="en">About</span></a>
+      <a href="index.html#contact"><span class="zh">联系</span><span class="en">Contact</span></a>
+    </nav>
+    <div class="nav__right">
+      <button class="lang-toggle" id="langToggle" aria-label="切换语言">EN</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="菜单">&#9776;</button>
+    </div>
+  </header>
+
+  <main class="project">
+
+    <!-- ===== HERO ===== -->
+    <section class="project__hero reveal">
+      <p class="project__eyebrow"><span class="zh">课程项目 · 移动应用设计</span><span class="en">Course Project · Mobile App Design</span></p>
+      <h1 class="project__title"><span class="zh">FoodiGo — 从日程到餐桌</span><span class="en">FoodiGo — From Schedule to Table</span></h1>
+      <p class="project__lede">
+        <span class="zh">一款面向忙碌人群的智能饮食推荐与食材规划应用：根据你的位置、偏好和现有食材，把"今天吃什么"从负担变成一件轻松的事。</span>
+        <span class="en">An intelligent recipe recommendation and ingredient-planning app for busy people: based on your location, preferences, and available ingredients, it turns "what should I eat today?" from a burden into something easy.</span>
+      </p>
+      <ul class="project__tags">
+        <li>UX Research</li>
+        <li>UI Design</li>
+        <li>Mobile App</li>
+        <li>Personalization</li>
+        <li>Food &amp; Health</li>
+      </ul>
+    </section>
+
+    <!-- ===== 首屏主视觉 ===== -->
+    <figure class="proj-img proj-img--hero reveal">
+      <img src="images/foodigo/cover.jpg?v=2" alt="FoodiGo 品牌主视觉" loading="eager" />
+      <figcaption><span class="zh">FoodiGo 品牌主视觉：定位本地食材、扫描、推荐与导航一站式体验</span><span class="en">FoodiGo brand hero: local ingredients, scan, recommendation, and navigation in one experience</span></figcaption>
+    </figure>
+
+    <!-- ===== 项目概述 ===== -->
+    <section class="project__block reveal">
+      <h2><span class="zh">项目概述</span><span class="en">Overview</span></h2>
+      <p>
+        <span class="zh">FoodiGo 是一款聚焦于"健康饮食决策"的移动应用设计。项目起源于对身边忙碌同学与年轻上班族的日常观察：他们往往想吃得健康，却被"不知道做什么、没时间规划、食材买不齐、烹饪没把握"等问题反复困扰。本项目通过用户访谈、亲和图整理与多轮原型迭代，试图把"从决定吃什么到完成一餐"的全流程压缩到最小阻力路径中。</span>
+        <span class="en">FoodiGo is a mobile app design centered on healthy eating decisions. It originated from observing busy students and young professionals around me: they often want to eat healthy, but are repeatedly stuck by "don't know what to cook, no time to plan, ingredients unavailable, and unsure how to cook." Through user interviews, affinity mapping, and multiple prototype iterations, this project tries to compress the whole journey from "deciding what to eat" to "finishing a meal" into the path of least resistance.</span>
+      </p>
+      <ul style="padding-left:20px;color:#333;line-height:1.9;margin-top:12px;">
+        <li><strong><span class="zh">项目类型：</span><span class="en">Type:</span></strong><span class="zh"> 课程项目</span><span class="en"> Course Project</span> &nbsp;|&nbsp; <strong><span class="zh">个人职责：</span><span class="en">Role:</span></strong><span class="zh"> UX 研究 / UI 设计</span><span class="en"> UX Research / UI Design</span></li>
+        <li><strong><span class="zh">项目周期：</span><span class="en">Duration:</span></strong><span class="zh"> 8 周</span><span class="en"> 8 Weeks</span> &nbsp;|&nbsp; <strong><span class="zh">工具：</span><span class="en">Tools:</span></strong> Figma, Miro</li>
+        <li><strong><span class="zh">核心用户：</span><span class="en">Target Users:</span></strong><span class="zh"> 忙碌的在校学生、职场新人等需要高效健康饮食决策的人群</span><span class="en"> Busy students and young professionals who need efficient, healthy eating decisions</span></li>
+      </ul>
+    </section>
+
+    <!-- ===== 设计挑战 ===== -->
+    <section class="project__block reveal">
+      <h2><span class="zh">设计挑战</span><span class="en">Design Challenge</span></h2>
+      <p>
+        <span class="zh">在研究阶段，我们把用户的零散反馈聚合成一个核心问题：如何在有限的时间和认知资源下，帮助用户快速做出既健康、又贴合当下条件的饮食选择？围绕这个问题，我们提出了一组"How Might We"挑战：</span>
+        <span class="en">In the research phase, we synthesized scattered user feedback into one core question: how can we help users quickly make healthy eating choices that fit their current context, within limited time and cognitive resources? Around this question, we formulated a set of "How Might We" challenges:</span>
+      </p>
+      <div class="challenge-list">
+        <div class="challenge-item">
+          <span class="challenge-item__no">1</span>
+          <div class="challenge-item__body">
+            <strong><span class="zh">基于可获取食材推荐</span><span class="en">Ingredient-based Recommendation</span></strong>
+            <p><span class="zh">如何根据用户附近可购买的食材，推荐现实可行的食谱？</span><span class="en">How might we recommend realistic recipes based on locally available ingredients?</span></p>
+          </div>
+        </div>
+        <div class="challenge-item">
+          <span class="challenge-item__no">2</span>
+          <div class="challenge-item__body">
+            <strong><span class="zh">适配忙碌日程</span><span class="en">Tight-schedule Fit</span></strong>
+            <p><span class="zh">如何让时间紧张的学生和上班族，在碎片化时间里获得健康膳食建议？</span><span class="en">How might busy students and professionals get healthful diet advice within tight schedules?</span></p>
+          </div>
+        </div>
+        <div class="challenge-item">
+          <span class="challenge-item__no">3</span>
+          <div class="challenge-item__body">
+            <strong><span class="zh">简化记录与反馈</span><span class="en">Easy Logging &amp; Feedback</span></strong>
+            <p><span class="zh">如何简化饮食记录流程，同时保证个性化营养反馈的准确性？</span><span class="en">How might we simplify food logging while ensuring accurate, personalized nutritional feedback?</span></p>
+          </div>
+        </div>
+        <div class="challenge-item">
+          <span class="challenge-item__no">4</span>
+          <div class="challenge-item__body">
+            <strong><span class="zh">降低烹饪心智负担</span><span class="en">Lower Cooking Mental Load</span></strong>
+            <p><span class="zh">如何通过分步、语音或视觉引导，降低备餐和烹饪的心智负担？</span><span class="en">How might step-by-step, voice, or visual support reduce the mental load of meal prep and cooking?</span></p>
+          </div>
+        </div>
+        <div class="challenge-item">
+          <span class="challenge-item__no">5</span>
+          <div class="challenge-item__body">
+            <strong><span class="zh">社区低干扰互动</span><span class="en">Low-disturbance Community</span></strong>
+            <p><span class="zh">如何为有共同健康目标的用户，提供有共鸣、不打扰的社区内容？</span><span class="en">How might we provide resonant, non-intrusive community content for users with shared health goals?</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 研究洞察 ===== -->
+    <section class="project__block reveal">
+      <h2><span class="zh">研究洞察</span><span class="en">Research Insights</span></h2>
+      <p class="fig-note">
+        <span class="zh">我们通过访谈与问卷收集了目标用户的真实反馈，用亲和图（Affinity Map）将碎片化信息聚合成五大主题，作为后续设计的直接依据。</span>
+        <span class="en">We collected real feedback from target users through interviews and surveys, and used an affinity map to synthesize fragmented information into five themes that directly guided subsequent design.</span>
+      </p>
+      <div class="insight-grid">
+        <div class="insight-card">
+          <h4><span class="zh">01 · 效率与低认知负荷</span><span class="en">01 · Efficiency &amp; Low Cognitive Load</span></h4>
+          <p><span class="zh">用户希望注册流程短、饮食记录快、界面直觉，同时兼容"精细规划型"和"快速估算型"两类人群。</span><span class="en">Users want short onboarding, quick food logging, intuitive interfaces, and support for both detailed planners and quick-estimator types.</span></p>
+        </div>
+        <div class="insight-card">
+          <h4><span class="zh">02 · 目标与计划驱动</span><span class="en">02 · Goals &amp; Plans</span></h4>
+          <p><span class="zh">当前 meal planning 耗时且僵化；用户需要能根据市场供应、个人目标（减脂/增肌等）灵活调整的饮食计划。</span><span class="en">Current meal planning is time-consuming and rigid; users need flexible diet plans that adapt to market supply and personal goals like fat loss or muscle gain.</span></p>
+        </div>
+        <div class="insight-card">
+          <h4><span class="zh">03 · 个性化与兴趣驱动</span><span class="en">03 · Personalization &amp; Interest</span></h4>
+          <p><span class="zh">用户期待基于饮食偏好、影响源和身体目标的内容推荐；信息收集过程要高效、不冗长。</span><span class="en">Users expect recommendations based on dietary preferences, influences, and physical goals; the information collection process must be efficient, not lengthy.</span></p>
+        </div>
+        <div class="insight-card">
+          <h4><span class="zh">04 · 烹饪辅助与食材替代</span><span class="en">04 · Cooking Aids &amp; Substitutions</span></h4>
+          <p><span class="zh">"不知道做什么"是高频痛点；用户需要匹配自己烹饪水平、支持食材替代和分步引导的食谱。</span><span class="en">"Don't know what to cook" is a frequent pain point; users need recipes matching their skill level, supporting ingredient substitution, and step-by-step guidance.</span></p>
+        </div>
+        <div class="insight-card">
+          <h4><span class="zh">05 · 社区有用且低打扰</span><span class="en">05 · Useful &amp; Low-disturbance Community</span></h4>
+          <p><span class="zh">用户愿意分享成就、获取同路人的支持，但反感噪音；社区内容需要针对不同健康需求精准匹配。</span><span class="en">Users are willing to share achievements and get peer support, but dislike noise; community content should be precisely matched to different health needs.</span></p>
+        </div>
+      </div>
+      <figure class="proj-img" style="margin-top:22px;">
+        <img src="images/foodigo/research-1.jpg?v=2" alt="亲和图：User Experience" loading="lazy" />
+        <figcaption><span class="zh">亲和图（节选）：用户体验主题——效率、视觉反馈与信任</span><span class="en">Affinity map excerpt: User Experience theme — efficiency, visual feedback, and trust</span></figcaption>
+      </figure>
+      <div class="result-photos" style="margin-top:18px;">
+        <figure>
+          <img src="images/foodigo/research-2.jpg?v=2" alt="亲和图：Goals and Plans" loading="lazy" />
+          <figcaption><span class="zh">目标与计划</span><span class="en">Goals &amp; Plans</span></figcaption>
+        </figure>
+        <figure>
+          <img src="images/foodigo/research-3.jpg?v=2" alt="亲和图：Personalized Preference" loading="lazy" />
+          <figcaption><span class="zh">个性化偏好</span><span class="en">Personalized Preference</span></figcaption>
+        </figure>
+      </div>
+      <div class="result-photos" style="margin-top:18px;">
+        <figure>
+          <img src="images/foodigo/research-4.jpg?v=2" alt="亲和图：Cooking Aids" loading="lazy" />
+          <figcaption><span class="zh">烹饪辅助</span><span class="en">Cooking Aids</span></figcaption>
+        </figure>
+        <figure>
+          <img src="images/foodigo/research-5.jpg?v=2" alt="亲和图：Share and Interaction" loading="lazy" />
+          <figcaption><span class="zh">分享与互动</span><span class="en">Share &amp; Interaction</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== 设计策略 ===== -->
+    <section class="project__block reveal">
+      <h2><span class="zh">设计策略</span><span class="en">Design Strategy</span></h2>
+      <p>
+        <span class="zh">基于五大研究洞察，我们把 FoodiGo 的定位从"菜谱工具"转向"智能饮食伙伴"，并确立了四条核心策略：</span>
+        <span class="en">Based on the five research insights, we repositioned FoodiGo from a "recipe tool" to an "intelligent eating companion," and established four core strategies:</span>
+      </p>
+      <div class="strategy-grid">
+        <div class="strategy-card strategy-card--yellow">
+          <span class="strategy-card__from"><span class="zh">手动规划</span><span class="en">Manual Planning</span></span>
+          <span class="strategy-card__arrow">&rarr;</span>
+          <span class="strategy-card__to"><span class="zh">智能推荐</span><span class="en">Intelligent Recommendation</span></span>
+        </div>
+        <div class="strategy-card strategy-card--teal">
+          <span class="strategy-card__from"><span class="zh">通用菜谱</span><span class="en">Generic Recipes</span></span>
+          <span class="strategy-card__arrow">&rarr;</span>
+          <span class="strategy-card__to"><span class="zh">个性化膳食计划</span><span class="en">Personalized Meal Plan</span></span>
+        </div>
+        <div class="strategy-card strategy-card--pink">
+          <span class="strategy-card__from"><span class="zh">独自摸索</span><span class="en">Figuring It Out Alone</span></span>
+          <span class="strategy-card__arrow">&rarr;</span>
+          <span class="strategy-card__to"><span class="zh">引导式烹饪</span><span class="en">Guided Cooking</span></span>
+        </div>
+        <div class="strategy-card strategy-card--blue">
+          <span class="strategy-card__from"><span class="zh">嘈杂社交 Feed</span><span class="en">Noisy Social Feed</span></span>
+          <span class="strategy-card__arrow">&rarr;</span>
+          <span class="strategy-card__to"><span class="zh">目标社群</span><span class="en">Goal-based Community</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 体验流程 ===== -->
+    <section class="project__block reveal">
+      <h2><span class="zh">体验流程</span><span class="en">User Journey</span></h2>
+      <div class="journey-steps">
+        <div class="journey-step">
+          <span class="journey-step__no">01</span>
+          <h4><span class="zh">快速入门</span><span class="en">Onboarding</span></h4>
+          <p><span class="zh">注册/登录 → 定位附近商超</span><span class="en">Sign up / log in → locate nearby stores</span></p>
+        </div>
+        <div class="journey-step">
+          <span class="journey-step__no">02</span>
+          <h4><span class="zh">偏好建立</span><span class="en">Preference Setup</span></h4>
+          <p><span class="zh">饮食目标 · 过敏/忌口 · 烹饪水平</span><span class="en">Diet goals · allergies · cooking level</span></p>
+        </div>
+        <div class="journey-step">
+          <span class="journey-step__no">03</span>
+          <h4><span class="zh">智能推荐</span><span class="en">Smart Recommendation</span></h4>
+          <p><span class="zh">按场景/食材/时间推荐食谱</span><span class="en">Recommend recipes by scenario, ingredient, time</span></p>
+        </div>
+        <div class="journey-step">
+          <span class="journey-step__no">04</span>
+          <h4><span class="zh">烹饪与记录</span><span class="en">Cook &amp; Log</span></h4>
+          <p><span class="zh">分步引导 · 食材替代 · 营养记录</span><span class="en">Step-by-step guide · substitutions · nutrition log</span></p>
+        </div>
+        <div class="journey-step">
+          <span class="journey-step__no">05</span>
+          <h4><span class="zh">分享与坚持</span><span class="en">Share &amp; Sustain</span></h4>
+          <p><span class="zh">成就打卡 · 同好社区</span><span class="en">Achievement check-ins · like-minded community</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 方案与界面 ===== -->
+    <section class="project__block reveal">
+      <h2><span class="zh">方案与界面</span><span class="en">Solution &amp; Interface</span></h2>
+      <p class="fig-note">
+        <span class="zh">以下为高保真界面展示，覆盖从启动、注册登录、位置选择到首页个性化推荐的完整冷启动流程。</span>
+        <span class="en">Below are high-fidelity interface screens covering the complete cold-start flow from launch, sign-up/log-in, location selection, to the personalized home feed.</span>
+      </p>
+
+      <h3 class="subhead"><span class="zh">启动与登录</span><span class="en">Launch &amp; Login</span></h3>
+      <div class="phone-grid">
+        <figure>
+          <img src="images/foodigo/ui-1.jpg?v=2" alt="FoodiGo 启动页" loading="lazy" />
+          <figcaption><span class="zh">启动页：品牌口号 + 登录/注册入口</span><span class="en">Launch: brand tagline + login/sign-up entry</span></figcaption>
+        </figure>
+        <figure>
+          <img src="images/foodigo/ui-2.jpg?v=2" alt="FoodiGo 登录页" loading="lazy" />
+          <figcaption><span class="zh">登录页：邮箱/密码 + 忘记密码</span><span class="en">Login: email/password + forgot password</span></figcaption>
+        </figure>
+        <figure>
+          <img src="images/foodigo/ui-3.jpg?v=2" alt="FoodiGo 注册页" loading="lazy" />
+          <figcaption><span class="zh">注册页：用户名/邮箱/密码</span><span class="en">Sign up: username/email/password</span></figcaption>
+        </figure>
+      </div>
+
+      <h3 class="subhead" style="margin-top:28px;"><span class="zh">验证与定位</span><span class="en">Verification &amp; Location</span></h3>
+      <div class="phone-grid">
+        <figure>
+          <img src="images/foodigo/ui-4.jpg?v=2" alt="验证码页" loading="lazy" />
+          <figcaption><span class="zh">4 位验证码验证</span><span class="en">4-digit verification code</span></figcaption>
+        </figure>
+        <figure>
+          <img src="images/foodigo/ui-5.jpg?v=2" alt="位置选择页" loading="lazy" />
+          <figcaption><span class="zh">位置选择：为本地食材推荐提供依据</span><span class="en">Location selection: basis for local ingredient recommendations</span></figcaption>
+        </figure>
+      </div>
+
+      <h3 class="subhead" style="margin-top:28px;"><span class="zh">首页推荐流</span><span class="en">Home Recommendation Feed</span></h3>
+      <figure class="proj-img" style="max-width:420px;margin-left:auto;margin-right:auto;">
+        <img src="images/foodigo/ui-6.jpg?v=2" alt="FoodiGo 首页推荐" loading="lazy" />
+        <figcaption><span class="zh">首页：按早餐/午餐/晚餐/零食分类，基于位置与偏好推荐食谱卡片，展示评分、评论数与烹饪时长</span><span class="en">Home: breakfast/lunch/dinner/snack categories, location- and preference-based recipe cards with ratings, reviews, and cook time</span></figcaption>
+      </figure>
+
+      <p class="block-summary" style="margin-top:22px;">
+        <span class="zh">整个冷启动流程被刻意控制在 5 步以内，尽量降低用户的进入门槛；位置信息则成为后续"本地食材可买性"与"商超导航"的关键输入。首页以"场景化分类 + 卡片流"呈现，让用户在 3 秒内就能从"不知道吃什么"过渡到"想做这道菜"。</span>
+        <span class="en">The cold-start flow is intentionally kept within five steps to minimize entry friction. Location information becomes a key input for subsequent "local ingredient availability" and "store navigation." The home screen uses "scenario categories + card feed" to help users move from "don't know what to eat" to "I want to make this" within three seconds.</span>
+      </p>
+    </section>
+
+    <!-- ===== 设计系统 ===== -->
+    <section class="project__block reveal">
+      <h2><span class="zh">视觉语言</span><span class="en">Visual Language</span></h2>
+      <div class="challenge-list">
+        <div class="challenge-item">
+          <span class="challenge-item__no">1</span>
+          <div class="challenge-item__body">
+            <strong><span class="zh">活力橙主色</span><span class="en">Vibrant Orange</span></strong>
+            <p><span class="zh">橙色传递食物的活力与食欲感，同时强化行动按钮（CTA）。</span><span class="en">Orange conveys food vitality and appetite, while strengthening call-to-action buttons.</span></p>
+          </div>
+        </div>
+        <div class="challenge-item">
+          <span class="challenge-item__no">2</span>
+          <div class="challenge-item__body">
+            <strong><span class="zh">大图卡片</span><span class="en">Large Image Cards</span></strong>
+            <p><span class="zh">首页食谱以大图卡片呈现，让用户一眼判断是否符合口味。</span><span class="en">Recipe cards use large images so users can instantly judge appeal.</span></p>
+          </div>
+        </div>
+        <div class="challenge-item">
+          <span class="challenge-item__no">3</span>
+          <div class="challenge-item__body">
+            <strong><span class="zh">清晰的信息层级</span><span class="en">Clear Information Hierarchy</span></strong>
+            <p><span class="zh">评分、时长、评论数等决策信息以统一组件展示，降低比较成本。</span><span class="en">Rating, time, and review count are shown in a unified component to reduce comparison cost.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 项目反思 ===== -->
+    <section class="project__block reveal">
+      <h2><span class="zh">项目反思</span><span class="en">Reflection</span></h2>
+      <div class="reflection">
+        <p>
+          <span class="zh">FoodiGo 让我第一次完整走完了从用户研究到高保真原型的移动应用设计流程。最大的收获是：饮食类产品的"个性化"和"效率"之间需要非常谨慎地平衡——问卷太长会吓跑用户，推荐不精准又会失去信任。亲和图帮我找到了那个"既足够轻量、又能支撑推荐"的信息边界。其次，"位置"在这里不只是定位功能，而是把"推荐"和"可执行"连接起来的关键变量：推荐了一道菜，用户需要知道能不能买到食材、去哪里买。这个洞察也影响了我后续对机器人 HMI 和智能座舱设计的理解：任何智能推荐都必须考虑"物理世界的可执行性"。</span>
+          <span class="en">FoodiGo was my first complete mobile app design process from user research to high-fidelity prototype. The biggest takeaway: "personalization" and "efficiency" in food apps must be carefully balanced — too long a questionnaire scares users, while imprecise recommendations erode trust. The affinity map helped me find the information boundary that is light enough yet sufficient for recommendations. Second, "location" here is not just a positioning feature, but the key variable connecting "recommendation" to "executability": when a dish is recommended, users need to know whether ingredients are available and where to buy them. This insight also shaped my later approach to robotics HMI and smart cockpit design: any intelligent recommendation must consider real-world executability.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- NEXT PROJECT LINK -->
+    <a class="project__next reveal" href="index.html#work">&larr; <span class="zh">返回作品集</span><span class="en">Back to Portfolio</span></a>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Leo 赖嘉豪 · Jiahao Lai</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
